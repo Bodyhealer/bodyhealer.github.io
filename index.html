@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8">    
+    
+    <meta name="author" content="Alex Heal">
+    <meta name="description" content="Learning developing web sites">
     <title>Моя тестовая страница</title>
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
 </head>
@@ -12,11 +16,17 @@
     <img src="images/logo.png" alt="Логотип ЧКЗ-Агро: Мощный бык с паром из ноздрей">
     <p>Разработка и &lt;производство&gt; <a href="http://chkzagro.ru/politic/" title="Политика конфиденциальности" target="_blank">современного оборудования</a> для</p>
     
-    <ul>
+    <ul class="what_do">
     <li id="my-id"> <em>сельского</em> хозяйства</li>
-    <li class="my-class"> коммунальных <strong>служб</strong></li>
+    <li class="my-class"> коммунальных <strong>&quot;служб&quot;</strong></li>
+        <ul>
+        <li>Муниципальных</li>
+        <li>Частных</li>
+        </ul>
     </ul>
-    <button>Change user</button>
+    <button class="add-row">Добавить строку в таблицу</button>
+    <button class="change-name">Сменить имя</button>
+    <p><input id="my-tel" type="tel"></p>
     <script src="scripts/main.js"></script>
 </body>
 </html>
