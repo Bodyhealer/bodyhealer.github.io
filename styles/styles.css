@@ -1,33 +1,6 @@
-
-p {
-    color: darkslategrey;
-    border: 1px solid black;
-    width: 300px;
-}
-p,li{
-    line-height: 1;
-    letter-spacing: 1px;
-}
-
-h1 {
+html, body {
     margin: 0;
-    padding: 20px 0;
-    color: darkblue;
-    text-shadow: 3px 3px 5px black;
-}
-p,li,h1 {
-    color: royalblue;
-}
-#my-id {
-    color: green
-}
-
-.my-class {
-    color: firebrick
-}
-
-a:hover {
-    color: crimson
+    padding: 0;
 }
 
 html {
@@ -41,15 +14,141 @@ html {
 }
 
 body {
-    width: 600px;
+    width: 70%;
     margin: 0 auto;
-    padding: 0px 20px 20px 20px;
-    border: 5px solid black;
 }
 
+/* || typography */
 
+h1, h2, h3 {
+    font-family: Roboto, sans-serif    
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: darkblue;
+    text-shadow: 3px 3px 5px black;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.9rem;
+}
+
+p {
+    color: darkslategrey;
+}
+
+p,li{
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* || header layout */
+
+nav, article, aside, footer {
+  background-color: white;
+  padding: 1%;
+}
+
+nav {
+  height: 60px;
+  background-color: lightgrey;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2em;
+}
+
+input[type="search"] {
+  flex: 3;
+}
+
+input[type="submit"] {
+  background: url("../images/baseline-search-24px.svg");
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 50%;
+  margin-left: 1rem;
+  border: 1;
+  background-position: center
+}
+
+/* || main layout */
+
+main {
+/*  display: flex;*/
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  margin-left: 10px;
+  background-color: lightgrey;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+#my-id {
+    color: green
+}
+
+.my-class {
+    color: firebrick
+}
+
+a:hover {
+    color: crimson
+}
 
 img {
     display: block;
     margin: 0 auto;
+}
+
+button {
+    margin: 3px
 }
