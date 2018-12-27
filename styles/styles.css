@@ -48,13 +48,12 @@ p {
 
 p,li{
     font-size: 1.4rem;
-    line-height: 1.5;
 }
 
 /* || header layout */
 
 nav, article, aside, footer {
-  background-color: white;
+  background-color: hsl(70,12%,92%);
   padding: 1%;
 }
 
@@ -84,6 +83,10 @@ nav a {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+}
+
+nav a:hover, a:active, a:focus {
+    color: hsl(70,50%,20%);
 }
 
 nav form {
@@ -140,15 +143,71 @@ footer {
     color: firebrick
 }
 
-a:hover {
-    color: crimson
+a:hover, a:active, a:focus {
+    color: crimson;
+    text-decoration: none;
+}
+
+[href^=http]::after {
+    content: '⤴';
 }
 
 img {
     display: block;
     margin: 0 auto;
+    transform: rotate(2deg)
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 button {
     margin: 3px
+}
+
+button:hover {
+    animation-name: rotate;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.first {
+    font-weight: bold;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+dd ul{
+    margin: auto;
+}
+
+dd li{
+    font-size: inherit;    
+}
+
+dt {
+    font-weight: bold;
+}
+
+dt:nth-of-type(odd) {
+    background-color: lightsteelblue;
+}
+
+dt:nth-of-type(even) {
+    background-color: #e0c0e0;
+}
+
+dd::first-letter {
+    font-size: 1.4rem;
+    font-weight: bold;
 }
