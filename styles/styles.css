@@ -50,6 +50,10 @@ p,li{
     font-size: 1.4rem;
 }
 
+li {
+    color: initial;
+}
+
 /* || header layout */
 
 nav, article, aside, footer {
