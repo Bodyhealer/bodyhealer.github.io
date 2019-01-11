@@ -159,7 +159,6 @@ a:hover, a:active, a:focus {
 img {
     display: block;
     margin: 0 auto;
-    transform: rotate(2deg)
 }
 
 @keyframes rotate {
@@ -214,4 +213,62 @@ dt:nth-of-type(even) {
 dd::first-letter {
     font-size: 1.4rem;
     font-weight: bold;
+}
+
+/* Rulesets to be matched up with selectors */
+
+.card {
+  width: 40em;
+  height: 24.7em;
+  margin: 2em auto;
+  background-color: hsl(70,12%,92%);
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+}
+
+.card header {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+  border-radius: 1.5em 1.5em 0 0;
+  margin: 0;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.card footer {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+  border-radius: 0 0 1.5em 1.5em;
+  margin: 0;
+}
+
+.card article {
+    height: 15em;
+    background-color: rgba(0,0,0,0.05);
+    margin: 0;
+}
+
+.card article img {
+  max-height: 200px;
+  float: right;
+  transform: rotate(180deg);
+  padding: 1em;
+}
+
+.card article p {
+  font-size: 1.3em;
+  margin:inherit;
+  padding: 1em;
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+
+iframe {
+    display: block;
+    margin: 0 auto;
 }
