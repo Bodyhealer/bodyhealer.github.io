@@ -1,4 +1,4 @@
-import {factorial_for} from './modules/bodyMath';
+import {factorial_for} from './modules/bodyMath.js';
 
 let myImage = document.querySelector('img');
 
