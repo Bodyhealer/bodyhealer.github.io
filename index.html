@@ -66,6 +66,13 @@
             <li><abbr title="Борона дисковая прицепная">БДП</abbr></li>
         </ul>
 
+        <div class="calc_fact">
+            <h3>Вычисление факториала числа</h3>
+            <span>Введите число</span><input type="text" name="operand" id="operand" value="1"><br>
+            <span>Ответ</span><p class="calc_fact-answer"></p>
+            <button class="calc_fact">Вычислить сумму</button>
+        </div>
+
         <p><a href="http://chkzagro.ru//images/u_accessories/1_7dcd3.jpg" download="Каток планчатый.jpg">Скачать изображение катка</a></p>
 
         <article>
@@ -107,7 +114,7 @@
                 <img src="/images/bodyhealer.jpg" alt="Фотография Алексея на горе Двухглавая">
                 <p>Россия<br>
                     Челябинск<br>
-                    <strong>E-Mail</strong>: klodium@gmail.com</p>
+                    <strong>E-Mail</strong>: <a href="mailto:klodium@gmail.com">klodium@gmail.com</a></p>
             </article>
             <footer>
                 <p>Изучение этого интересного мира</p>
@@ -157,7 +164,8 @@ para.onclick = function() {
         </address>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="script/bodyMath.js"></script>
 </body>
 
 </html>

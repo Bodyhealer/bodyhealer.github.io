@@ -175,13 +175,13 @@ button {
     margin: 3px
 }
 
-button:hover {
+/*button:hover {
     animation-name: rotate;
     animation-duration: 0.6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
 }
-
+*/
 .first {
     font-weight: bold;
 }
