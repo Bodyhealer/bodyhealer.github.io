@@ -6,6 +6,7 @@
 
 import factorialFor from './modules/bodyMath.js';
 import fizzBuzz from './modules/fizzBuzz.js';
+import diffAngle from './modules/diffAngle.js';
 
 const myImage = document.querySelector('img');
 
