@@ -111,6 +111,16 @@ input[type="submit"] {
   background-position: center
 }
 
+input {
+  margin: 0 1em;
+  padding: 0.2em 1em;
+  font-size: 1.1em;
+}
+
+label {
+  font-size: 1.1em;
+}
+
 /* || main layout */
 
 /* main {
@@ -168,7 +178,11 @@ img {
 }
 
 button {
-    margin: 3px
+    margin: 3px;
+    font-size: 1.1em;
+    padding: 0.3em 0.5em;
+    border: 2px solid black;
+    border-radius: 0.3em;
 }
 
 /*button:hover {

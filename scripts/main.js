@@ -8,6 +8,7 @@ import factorialFor from './modules/bodyMath.js';
 import fizzBuzz from './modules/fizzBuzz.js';
 import diffAngle from './modules/diffAngle.js';
 import reverseInt from './modules/reverseInt.js';
+import ackermann from './modules/ackermann.js';
 
 const myImage = document.querySelector('img');
 
@@ -78,6 +79,19 @@ const calcDiffAngle = () => {
 btnCalDiffAngle.onclick = () => {
   calcDiffAngle();
 };
+
+const btnCalAckermann = document.querySelector('button.ackermann');
+const fieldAnswerAckermann = document.querySelector('p.ackermannAnswer');
+
+const calcAckermann = () => {
+  const operAckermann1 = parseInt(document.querySelector('input#operAckermann1').value);
+  const operAckermann2 = parseInt(document.querySelector('input#operAckermann2').value);
+  fieldAnswerAckermann.innerHTML = ackermann(operAckermann1, operAckermann2);
+};
+
+btnCalAckermann.onclick = () => {
+  calcAckermann();
+}
 
 const btnCalReverseInt = document.querySelector('button.reverseInt');
 const fieldAnswerReverseInt = document.querySelector('p.reverseIntAnswer');
