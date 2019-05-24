@@ -1,28 +1,34 @@
-const factorial_recur = (n) => {
-    if (n === 1) {
-        return 1;
-    }
-    return n * factorial(n-1);
-}
+/* eslint-disable strict */
 
-const factorial_while = (n) => {
-    let counter = 1;
-    let result = 1;
+'use strict';
 
-    while (counter <= n) {
-        result = result * counter;
-        counter++;
-    }
+/* const factorialRecur = (n) => {
+  if (n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+};
 
-    return result;
-}
+const factorialWhile = (n) => {
+  let counter = 1;
+  let result = 1;
 
-export const factorial_for = (n) => {
-    let result = 1;
+  while (counter <= n) {
+    result *= counter;
+    counter++;
+  }
 
-    for (let i = 1; i <= n; i++) {
-        result *= i;
-    }
+  return result;
+}; */
 
-    return result;
-}
+const factorialFor = (n) => {
+  let result = 1;
+
+  for (let i = 1; i <= n; i += 1) {
+    result *= i;
+  }
+
+  return result;
+};
+
+export default factorialFor;

@@ -1,79 +1,115 @@
-import {factorial_for} from './modules/bodyMath.js';
+/* eslint-disable no-alert */
+/* eslint-disable strict */
+/* eslint-disable func-names */
 
-let myImage = document.querySelector('img');
+'use strict';
 
-myImage.onclick = function (e2) {
-    e2.stopPropagation;
-    let mySrc = myImage.getAttribute('src');
-    if (mySrc === "images/logo.png") {
-        myImage.setAttribute('src', 'images/bull.jpg');
-    } else {
-        myImage.setAttribute('src', 'images/logo.png');
-    }
+import factorialFor from './modules/bodyMath.js';
+import fizzBuzz from './modules/fizzBuzz.js';
+
+const myImage = document.querySelector('img');
+
+myImage.onclick = (e2) => {
+  e2.stopPropagation();
+  const mySrc = myImage.getAttribute('src');
+  if (mySrc === 'images/logo.png') {
+    myImage.setAttribute('src', 'images/bull.jpg');
+  } else {
+    myImage.setAttribute('src', 'images/logo.png');
+  }
 };
 
-let myButton = document.querySelector('button.change-name');
-let myHeading = document.querySelector('h1');
+const myButton = document.querySelector('button.change-name');
+const myHeading = document.querySelector('h1');
 
-function setUserName() {
-    let myName = prompt('Пожалуйста введите своё имя.');
-    localStorage.setItem('name', myName);
-    myHeading.innerText = `Mozilla крутая, ${myName}`;
-}
+const setUserName = () => {
+  const myName = prompt('Пожалуйста введите своё имя.');
+  localStorage.setItem('name', myName);
+  myHeading.innerText = `Mozilla крутая, ${myName}`;
+};
 
 if (!localStorage.getItem('name')) {
-    setUserName();
+  setUserName();
 } else {
-    let storedName = localStorage.getItem('name');
-    myHeading.innerText = `Mozilla крутая, ${storedName}`;
+  const storedName = localStorage.getItem('name');
+  myHeading.innerText = `Mozilla крутая, ${storedName}`;
 }
 
-myButton.onclick = function () {
-    setUserName();
+myButton.onclick = () => {
+  setUserName();
 };
 
-const btn_calc_fact = document.querySelector('button.calc_fact');
-const field_answer = document.querySelector('p.calc_fact-answer');
+const btnCalcFact = document.querySelector('button.calc_fact');
+const fieldAnswer = document.querySelector('p.calc_fact-answer');
 
-btn_calc_fact.onclick = () => {
-    calc_fact();
+const calcFact = () => {
+  const operand = parseInt(document.querySelector('input#operand').value);
+  fieldAnswer.innerText = factorialFor(operand);
 };
 
-const calc_fact = () => {
-    let operand = parseInt(document.querySelector('input#operand').value);    
-    field_answer.innerText = factorial_for(operand);
-}
+btnCalcFact.onclick = () => {
+  calcFact();
+};
 
-let list = document.querySelector('ul.what_do');
-let btnAddRow = document.querySelector('button.add-row');
+const btnCalFizzBuzz = document.querySelector('button.fizzBuzz');
+const fieldAnswerFizzBuzz = document.querySelector('p.fizzBuzzAnswer');
 
-list.querySelectorAll('li').forEach(e => {e.addEventListener('click', function(e1) {
+const calcFizzBuzz = () => {
+  const fizzOperBegin = parseInt(document.querySelector('input#fizzOperBegin').value);
+  const fizzOperEnd = parseInt(document.querySelector('input#fizzOperEnd').value);
+  fieldAnswerFizzBuzz.innerHTML = fizzBuzz(fizzOperBegin, fizzOperEnd);
+};
+
+btnCalFizzBuzz.onclick = () => {
+  calcFizzBuzz();
+};
+
+const btnCalDiffAngle = document.querySelector('button.diffAngle');
+const fieldAnswerDiffAngle = document.querySelector('p.diffAngleAnswer');
+
+const calcDiffAngle = () => {
+  const operAngle1 = parseInt(document.querySelector('input#operAngle1').value);
+  const operAngle2 = parseInt(document.querySelector('input#operAngle2').value);
+  fieldAnswerDiffAngle.innerHTML = diffAngle(operAngle1, operAngle2);
+};
+
+btnCalDiffAngle.onclick = () => {
+  calcDiffAngle();
+};
+
+const list = document.querySelector('ul.what_do');
+const btnAddRow = document.querySelector('button.add-row');
+
+list.querySelectorAll('li').forEach((e) => {
+  e.onclick = function (e1) {
+    e1.stopPropagation();
+    const listContent = prompt('Введи новый текст для строки из списка');
+    this.textContent = listContent;
+  };
+});
+
+/* document.querySelectorAll('li').forEach(e => {e.addEventListener('click', function(e1) {
         e1.stopPropagation();
         let listContent = prompt("Введи новый текст для строки из списка");
         this.textContent = listContent;
-    })});
+    })}); */
 
-/*document.querySelectorAll('li').forEach(e => {e.addEventListener('click', function(e1) {
+/* list.childNodes.forEach(e => {e.addEventListener('click', function(e1) {
         e1.stopPropagation();
         let listContent = prompt("Введи новый текст для строки из списка");
         this.textContent = listContent;
-    })});*/
+    })}); */
 
-/*list.childNodes.forEach(e => {e.addEventListener('click', function(e1) {
-        e1.stopPropagation();
-        let listContent = prompt("Введи новый текст для строки из списка");
-        this.textContent = listContent;
-    })});*/
+btnAddRow.onclick = () => {
+  const listItem = document.createElement('li');
+  const listContent = prompt('Какой текст ты хочешь добавить в список?');
+  listItem.textContent = listContent;
+  list.appendChild(listItem);
 
-btnAddRow.onclick = function () {
-    let listItem = document.createElement('li');
-    let listContent = prompt("Какой текст ты хочешь добавить в список?");
-    listItem.textContent = listContent;
-    list.appendChild(listItem);
-    
-    listItem.onclick = function(e) {
-        e.stopPropagation();
-        let listContent = prompt("Введи новый текст для строки из списка");
-        this.textContent = listContent;
-    }
-}
+  listItem.onclick = function (e) {
+    e.stopPropagation();
+    // eslint-disable-next-line no-shadow
+    const listContent = prompt('Введи новый текст для строки из списка');
+    this.textContent = listContent;
+  };
+};
