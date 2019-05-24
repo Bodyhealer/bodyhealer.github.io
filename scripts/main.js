@@ -7,6 +7,7 @@
 import factorialFor from './modules/bodyMath.js';
 import fizzBuzz from './modules/fizzBuzz.js';
 import diffAngle from './modules/diffAngle.js';
+import reverseInt from './modules/reverseInt.js';
 
 const myImage = document.querySelector('img');
 
@@ -76,6 +77,18 @@ const calcDiffAngle = () => {
 
 btnCalDiffAngle.onclick = () => {
   calcDiffAngle();
+};
+
+const btnCalReverseInt = document.querySelector('button.reverseInt');
+const fieldAnswerReverseInt = document.querySelector('p.reverseIntAnswer');
+
+const calcReverseInt = () => {
+  const operReverseInt = parseInt(document.querySelector('input#operReverseInt').value);
+  fieldAnswerReverseInt.innerHTML = reverseInt(operReverseInt);
+};
+
+btnCalReverseInt.onclick = () => {
+  calcReverseInt();
 };
 
 const list = document.querySelector('ul.what_do');
