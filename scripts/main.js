@@ -91,7 +91,7 @@ const calcAckermann = () => {
 
 btnCalAckermann.onclick = () => {
   calcAckermann();
-}
+};
 
 const btnCalReverseInt = document.querySelector('button.reverseInt');
 const fieldAnswerReverseInt = document.querySelector('p.reverseIntAnswer');

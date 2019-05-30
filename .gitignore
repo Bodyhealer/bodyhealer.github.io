@@ -1,3 +1,11 @@
+#.bashrc
+
+.bashrc
+
+#Babel translate directory
+
+dist
+
 # Logs
 
 logs
