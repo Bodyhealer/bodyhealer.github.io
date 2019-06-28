@@ -9,6 +9,7 @@ import fizzBuzz from './modules/fizzBuzz.js';
 import diffAngle from './modules/diffAngle.js';
 import reverseInt from './modules/reverseInt.js';
 import ackermann from './modules/ackermann.js';
+import fib from './modules/fib.js';
 
 const myImage = document.querySelector('img');
 
@@ -91,6 +92,18 @@ const calcAckermann = () => {
 
 btnCalAckermann.onclick = () => {
   calcAckermann();
+};
+
+const btnCalcFib = document.querySelector('button.fib');
+const fieldAnswerFib = document.querySelector('p.fibAnswer');
+
+const calcFib = () => {
+  const operFib = parseInt(document.querySelector('input#operFib').value);
+  fieldAnswerFib.innerHTML = fib(operFib);
+};
+
+btnCalcFib.onclick = () => {
+  calcFib();
 };
 
 const btnCalReverseInt = document.querySelector('button.reverseInt');
