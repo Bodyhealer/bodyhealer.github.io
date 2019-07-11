@@ -12,6 +12,7 @@ import reverseInt from './modules/reverseInt.js';
 import ackermann from './modules/ackermann.js';
 import fib from './modules/fib.js';
 import fibBinet from './modules/fibBinet.js';
+import fromCharCode from './modules/fromCharCode.js';
 
 const myImage = document.querySelector('img');
 
@@ -120,7 +121,20 @@ btnCalcFibBinet.onclick = () => {
   calcFibBinet();
 };
 
-const btnCalReverseInt = document.querySelector('button.reverseInt');
+const btnCalcFromCharCode = document.querySelector('button.fromCharCode');
+const fieldAnswerFromCharCode = document.querySelector('p.fromCharCodeAnswer');
+
+const calcFromCharCode = () => {
+  const operFromCharCode1 = parseInt(document.querySelector('input#operFromCharCode1').value);
+  const operFromCharCode2 = parseInt(document.querySelector('input#operFromCharCode2').value);
+  fieldAnswerFromCharCode.innerHTML = fromCharCode(operFromCharCode1, operFromCharCode2);
+}
+
+btnCalcFromCharCode.onclick = () => {
+  calcFromCharCode();
+}
+
+const btnCalcReverseInt = document.querySelector('button.reverseInt');
 const fieldAnswerReverseInt = document.querySelector('p.reverseIntAnswer');
 
 const calcReverseInt = () => {
@@ -128,7 +142,7 @@ const calcReverseInt = () => {
   fieldAnswerReverseInt.innerHTML = reverseInt(operReverseInt);
 };
 
-btnCalReverseInt.onclick = () => {
+btnCalcReverseInt.onclick = () => {
   calcReverseInt();
 };
 
