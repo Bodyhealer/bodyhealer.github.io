@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable strict */
 /* eslint-disable func-names */
+/* jshint -W117 */
 
 'use strict';
 
@@ -10,6 +11,7 @@ import diffAngle from './modules/diffAngle.js';
 import reverseInt from './modules/reverseInt.js';
 import ackermann from './modules/ackermann.js';
 import fib from './modules/fib.js';
+import fibBinet from './modules/fibBinet.js';
 
 const myImage = document.querySelector('img');
 
@@ -27,7 +29,7 @@ const myButton = document.querySelector('button.change-name');
 const myHeading = document.querySelector('h1');
 
 const setUserName = () => {
-  const myName = prompt('Пожалуйста введите своё имя.');
+  const myName = 'Привет';
   localStorage.setItem('name', myName);
   myHeading.innerText = `Mozilla крутая, ${myName}`;
 };
@@ -104,6 +106,18 @@ const calcFib = () => {
 
 btnCalcFib.onclick = () => {
   calcFib();
+};
+
+const btnCalcFibBinet = document.querySelector('button.fibBinet');
+const fieldAnswerFibBinet = document.querySelector('p.fibBinetAnswer');
+
+const calcFibBinet = () => {
+  const operFibBinet = parseInt(document.querySelector('input#operFibBinet').value);
+  fieldAnswerFibBinet.innerHTML = fibBinet(operFibBinet);
+};
+
+btnCalcFibBinet.onclick = () => {
+  calcFibBinet();
 };
 
 const btnCalReverseInt = document.querySelector('button.reverseInt');

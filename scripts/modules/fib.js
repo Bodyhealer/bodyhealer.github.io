@@ -2,7 +2,7 @@
 
 'use strict';
 
-const fib = (num) => {  
+const fib = (num) => {
   if (num === 1) {
     return 1;
   }
