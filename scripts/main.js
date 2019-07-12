@@ -13,6 +13,7 @@ import ackermann from './modules/ackermann.js';
 import fib from './modules/fib.js';
 import fibBinet from './modules/fibBinet.js';
 import fromCharCode from './modules/fromCharCode.js';
+import eratosthenesSieve from './modules/eratosthenesSieve.js';
 
 const myImage = document.querySelector('img');
 
@@ -132,6 +133,18 @@ const calcFromCharCode = () => {
 
 btnCalcFromCharCode.onclick = () => {
   calcFromCharCode();
+};
+
+const btnCalcEratosthenes = document.querySelector('button.eratosthenes');
+const fieldAnswerEratosthenes = document.querySelector('p.eratosthenesAnswer');
+
+const calcEratosthenes = () => {
+  const operEratosthenes = parseInt(document.querySelector('input#operEratosthenes').value);
+  fieldAnswerEratosthenes.innerHTML = eratosthenesSieve(operEratosthenes);
+};
+
+btnCalcEratosthenes.onclick = () => {
+  calcEratosthenes();
 };
 
 const btnCalcReverseInt = document.querySelector('button.reverseInt');
