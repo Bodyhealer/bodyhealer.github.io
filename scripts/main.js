@@ -128,11 +128,11 @@ const calcFromCharCode = () => {
   const operFromCharCode1 = parseInt(document.querySelector('input#operFromCharCode1').value);
   const operFromCharCode2 = parseInt(document.querySelector('input#operFromCharCode2').value);
   fieldAnswerFromCharCode.innerHTML = fromCharCode(operFromCharCode1, operFromCharCode2);
-}
+};
 
 btnCalcFromCharCode.onclick = () => {
   calcFromCharCode();
-}
+};
 
 const btnCalcReverseInt = document.querySelector('button.reverseInt');
 const fieldAnswerReverseInt = document.querySelector('p.reverseIntAnswer');
