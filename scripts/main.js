@@ -195,3 +195,17 @@ btnAddRow.onclick = () => {
     this.textContent = listContent;
   };
 };
+
+/*
+С помощью reduce можно реализовать другие функции: map, filter,
+ но они в таком виде они будут не информативны,
+  можно написать алиас для них
+arr.reduce((acc, cur) => { return [...acc, cur + 1]},[])
+arr.reduce((acc, cur) => { acc.push(cur + 1); return acc;},[])
+const map = (fn) => arr.reduce((acc, cur) => {acc.push(fn(cur)); return acc;},[]);
+map(x => x+1)
+arr.filter(x=> x%2)
+функция по-умолчанию проходит по всем элементам массива, поэтому можно написать свою
+реализацию функции reduce чтобы она могла останавливаться
+const REDUCED = "break";
+*/
