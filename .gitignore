@@ -181,3 +181,7 @@ typings/
 # DynamoDB Local files
 
 .dynamodb/
+
+# Code workspace
+
+.code-workspace

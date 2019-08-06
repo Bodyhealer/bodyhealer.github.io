@@ -12,7 +12,7 @@ import reverseInt from './modules/reverseInt.js';
 import ackermann from './modules/ackermann.js';
 import fib from './modules/fib.js';
 import fibBinet from './modules/fibBinet.js';
-import fromCharCode from './modules/fromCharCode.js';
+import fromCodePoint from './modules/fromCodePoint.js';
 import eratosthenesSieve from './modules/eratosthenesSieve.js';
 
 const myImage = document.querySelector('img');
@@ -122,17 +122,17 @@ btnCalcFibBinet.onclick = () => {
   calcFibBinet();
 };
 
-const btnCalcFromCharCode = document.querySelector('button.fromCharCode');
-const fieldAnswerFromCharCode = document.querySelector('p.fromCharCodeAnswer');
+const btnCalcFromCodePoint = document.querySelector('button.fromCodePoint');
+const fieldAnswerFromCodePoint = document.querySelector('p.fromCodePointAnswer');
 
-const calcFromCharCode = () => {
-  const operFromCharCode1 = parseInt(document.querySelector('input#operFromCharCode1').value);
-  const operFromCharCode2 = parseInt(document.querySelector('input#operFromCharCode2').value);
-  fieldAnswerFromCharCode.innerHTML = fromCharCode(operFromCharCode1, operFromCharCode2);
+const calcFromCodePoint = () => {
+  const operFromCodePoint1 = parseInt(document.querySelector('input#operFromCodePoint1').value);
+  const operFromCodePoint2 = parseInt(document.querySelector('input#operFromCodePoint2').value);
+  fieldAnswerFromCodePoint.innerHTML = fromCodePoint(operFromCodePoint1, operFromCodePoint2);
 };
 
-btnCalcFromCharCode.onclick = () => {
-  calcFromCharCode();
+btnCalcFromCodePoint.onclick = () => {
+  calcFromCodePoint();
 };
 
 const btnCalcEratosthenes = document.querySelector('button.eratosthenes');
@@ -141,6 +141,20 @@ const fieldAnswerEratosthenes = document.querySelector('p.eratosthenesAnswer');
 const calcEratosthenes = () => {
   const operEratosthenes = parseInt(document.querySelector('input#operEratosthenes').value);
   fieldAnswerEratosthenes.innerHTML = eratosthenesSieve(operEratosthenes);
+
+  const suite = new Benchmark.Suite();
+
+  // add tests
+  suite
+    .add('Eratosthenes Sieve', () => {
+      eratosthenesSieve(operEratosthenes);
+    })
+    // add listeners
+    .on('cycle', (event) => {
+      console.log(String(event.target));
+    })
+    // run async
+    .run({ async: true });
 };
 
 btnCalcEratosthenes.onclick = () => {

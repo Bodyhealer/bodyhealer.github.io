@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.9",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.14",
+    "microtime": "^3.0.0"
   }
 }

@@ -1,265 +1,384 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-    <meta charset="utf-8">
-
-    <meta name="author" content="Alex Heal">
-    <meta name="description" content="Learning developing web sites">
+    <meta name="author" content="Alex Heal" />
+    <meta name="description" content="Learning developing web sites" />
     <title>Моя тестовая страница</title>
-    <link href="styles/styles.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"
-        type="text/css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Here is our main header that is used across all the pages of our website -->
 
     <header>
-        <h1>Официальный сайт компании ЧКЗ-Агро</h1>
+      <h1>Официальный сайт компании ЧКЗ-Агро</h1>
     </header>
 
-    <nav>
+    <!-- <nav>
         <ul>
             <li><a href="#">Наша команда</a></li>
             <li><a href="#">Продукция</a></li>
             <li><a href="#">Контакты</a></li>
-        </ul>
+        </ul> -->
 
-        <!-- A Search form is another commmon non-linear way to navigate through a website. -->
+    <!-- A Search form is another commmon non-linear way to navigate through a website. -->
 
-        <form>
+    <!-- <form>
             <input type="search" name="q" placeholder="Поиск">
             <input type="submit" value="">
         </form>
-    </nav>
+    </nav> -->
 
     <!-- Here is our page's main content -->
 
     <main>
+      <img
+        src="images/logo.png"
+        alt="Логотип ЧКЗ-Агро: Мощный бык с паром из ноздрей"
+      />
 
-        <img src="images/logo.png" alt="Логотип ЧКЗ-Агро: Мощный бык с паром из ноздрей">
+      <h2>
+        Разработка и &lt;производство&gt;
+        <a
+          href="http://chkzagro.ru/politic/"
+          title="Политика конфиденциальности"
+          target="_blank"
+          >современного оборудования</a
+        >
+        для
+      </h2>
 
-        <h2>Разработка и &lt;производство&gt; <a href="http://chkzagro.ru/politic/" title="Политика конфиденциальности"
-                target="_blank">современного оборудования</a> для</h2>
+      <ul class="what_do">
+        <li id="my-id"><em>сельского</em> хозяйства</li>
+        <li class="my-class">
+          коммунальных <strong>&quot;служб&quot;</strong>
+          <ul>
+            <li>Муниципальны<sub>х</sub></li>
+            <li>Частны<sup>х</sup></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="add-row">Добавить строку в список</button><br />
+      <button class="change-name">Сменить имя</button>
+      <hr />
+      <h3>Список сельскохозяйственных орудий</h3>
+      <ul>
+        <li><abbr title="Борона дисковая навеская">БДН</abbr></li>
+        <li><abbr title="Борона дисковая прицепная">БДП</abbr></li>
+      </ul>
 
-        <ul class="what_do">
-            <li id="my-id"> <em>сельского</em> хозяйства</li>
-            <li class="my-class"> коммунальных <strong>&quot;служб&quot;</strong>
-                <ul>
-                    <li>Муниципальны<sub>х</sub></li>
-                    <li>Частны<sup>х</sup></li>
-                </ul>
-            </li>
-        </ul>
-        <button class="add-row">Добавить строку в список</button><br>
-        <button class="change-name">Сменить имя</button>
-        <hr>
-        <h3>Список сельскохозяйственных орудий</h3>
-        <ul>
-            <li><abbr title="Борона дисковая навеская">БДН</abbr></li>
-            <li><abbr title="Борона дисковая прицепная">БДП</abbr></li>
-        </ul>
+      <div class="calc">
+        <h3>Вычисление факториала числа</h3>
+        <p>Введите число</p>
+        <input type="text" name="operand" id="operand" value="1" /><br />
+        <p>Ответ</p>
+        <p class="calc_fact-answer"></p>
+        <button class="calc_fact">Вычислить факториал</button>
+      </div>
 
-        <div class="calc">
-            <h3>Вычисление факториала числа</h3>
-            <p>Введите число</p>
-            <input type="text" name="operand" id="operand" value="1"><br>
-            <p>Ответ</p>
-            <p class="calc_fact-answer"></p>
-            <button class="calc_fact">Вычислить факториал</button>
-        </div>
+      <div class="calc">
+        <h3>fizzBuzz</h3>
+        <p>Введите числа для диапазона</p>
+        <label
+          >От<input
+            type="text"
+            name="fizzOperBegin"
+            id="fizzOperBegin"
+            value="1"
+        /></label>
+        <label
+          >До<input type="text" name="fizzOperEnd" id="fizzOperEnd" value="20"
+        /></label>
+        <p>Отвeт</p>
+        <p class="fizzBuzzAnswer"></p>
+        <button class="fizzBuzz">Найти все FizzBuzz</button>
+      </div>
 
-        <div class="calc">
-            <h3>fizzBuzz</h3>
-            <p>Введите числа для диапазона</p>
-            <label>От<input type="text" name="fizzOperBegin" id="fizzOperBegin" value="1"></label>
-            <label>До<input type="text" name="fizzOperEnd" id="fizzOperEnd" value="20"></label>
-            <p>Отвeт</p>
-            <p class="fizzBuzzAnswer"></p>
-            <button class="fizzBuzz">Найти все FizzBuzz</button>
-        </div>
+      <div class="calc">
+        <h3>Разница между двумя углами</h3>
+        <p>Введите значения углов в градусах</p>
+        <label
+          >Первый угол<input
+            type="text"
+            name="operAngle1"
+            id="operAngle1"
+            value="10"
+        /></label>
+        <label
+          >Второй угол<input
+            type="text"
+            name="operAngle2"
+            id="operAngle2"
+            value="350"
+        /></label>
+        <p>Ответ</p>
+        <p class="diffAngleAnswer"></p>
+        <button class="diffAngle">Вычислить угол</button>
+      </div>
 
-        <div class="calc">
-            <h3>Разница между двумя углами</h3>
-            <p>Введите значения углов в градусах</p>
-            <label>Первый угол<input type="text" name="operAngle1" id="operAngle1" value="10"></label>
-            <label>Второй угол<input type="text" name="operAngle2" id="operAngle2" value="350"></label>
-            <p>Ответ</p>
-            <p class="diffAngleAnswer"></p>
-            <button class="diffAngle">Вычислить угол</button>
-        </div>
+      <div class="calc">
+        <h3>Переворот числа</h3>
+        <p>Введите число</p>
+        <input
+          type="text"
+          name="operReverseInt"
+          id="operReverseInt"
+          value="123"
+        />
+        <p>Ответ</p>
+        <p class="reverseIntAnswer"></p>
+        <button class="reverseInt">Перевернуть число</button>
+      </div>
 
-        <div class="calc">
-            <h3>Переворот числа</h3>
-            <p>Введите число</p>
-            <input type="text" name="operReverseInt" id="operReverseInt" value="123">
-            <p>Ответ</p>
-            <p class="reverseIntAnswer"></p>
-            <button class="reverseInt">Перевернуть число</button>
-        </div>
+      <div class="calc">
+        <h3>Функция Аккермана</h3>
+        <p>Введите числа</p>
+        <label
+          >Первое число<input
+            type="text"
+            name="operAckermann1"
+            id="operAckermann1"
+            value="2"
+        /></label>
+        <label
+          >Второе число<input
+            type="text"
+            name="operAckermann2"
+            id="operAckermann2"
+            value="2"
+        /></label>
+        <p>Ответ</p>
+        <p class="ackermannAnswer"></p>
+        <button class="ackermann">Вычислить функцию Аккермана</button>
+      </div>
 
-        <div class="calc">
-            <h3>Функция Аккермана</h3>
-            <p>Введите числа</p>
-            <label>Первое число<input type="text" name="operAckermann1" id="operAckermann1" value="2"></label>
-            <label>Второе число<input type="text" name="operAckermann2" id="operAckermann2" value="2"></label>
-            <p>Ответ</p>
-            <p class="ackermannAnswer"></p>
-            <button class="ackermann">Вычислить функцию Аккермана</button>
-        </div>
+      <div class="calc">
+        <h3>Число Фибоначчи</h3>
+        <p>Введите число</p>
+        <input type="text" name="operFib" id="operFib" value="6" />
+        <p>Ответ</p>
+        <p class="fibAnswer"></p>
+        <button class="fib">Вычислить число Фибоначчи</button>
+      </div>
 
-        <div class="calc">
-            <h3>Число Фибоначчи</h3>
-            <p>Введите число</p>
-            <input type="text" name="operFib" id="operFib" value="6">
-            <p>Ответ</p>
-            <p class="fibAnswer"></p>
-            <button class="fib">Вычислить число Фибоначчи</button>
-        </div>
+      <div class="calc">
+        <h3>Число Фибоначчи по формуле Бине</h3>
+        <p>Введите число</p>
+        <input type="text" name="operFibBinet" id="operFibBinet" value="6" />
+        <p>Ответ</p>
+        <p class="fibBinetAnswer"></p>
+        <button class="fibBinet">Вычислить Число Фибоначчи</button>
+      </div>
 
-        <div class="calc">
-            <h3>Число Фибоначчи по формуле Бине</h3>
-            <p>Введите число</p>
-            <input type="text" name="operFibBinet" id="operFibBinet" value="6">
-            <p>Ответ</p>
-            <p class="fibBinetAnswer"></p>
-            <button class="fibBinet">Вычислить Число Фибоначчи</button>
-        </div>
+      <div class="calc">
+        <h3>Символы по Юникодам</h3>
+        <p>Введите числа</p>
+        <label
+          >От<input
+            type="text"
+            name="operFromCodePoint1"
+            id="operFromCodePoint1"
+            value="1035"
+        /></label>
+        <label
+          >До<input
+            type="text"
+            name="operFromCodePoint2"
+            id="operFromCodePoint2"
+            value="1110"
+        /></label>
+        <p>Ответ</p>
+        <p class="fromCodePointAnswer"></p>
+        <button class="fromCodePoint">Вывести символы</button>
+      </div>
 
-        <div class="calc">
-            <h3>Символы по Юникодам</h3>
-            <p>Введите числа</p>
-            <label>От<input type="text" name="operFromCharCode1" id="operFromCharCode1" value="1035"></label>
-            <label>До<input type="text" name="operFromCharCode2" id="operFromCharCode2" value="1110"></label>
-            <p>Ответ</p>
-            <p class="fromCharCodeAnswer"></p>
-            <button class="fromCharCode">Вывести символы</button>
-        </div>
+      <div class="calc">
+        <h3>Решето Эратосфена</h3>
+        <p>Введите до какого числа искать простые числа</p>
+        <input
+          type="text"
+          name="operEratosthenes"
+          id="operEratosthenes"
+          value="100"
+        />
+        <p>Ответ</p>
+        <p class="eratosthenesAnswer"></p>
+        <button class="eratosthenes">Вывести простые числа</button>
+      </div>
 
-        <div class="calc">
-            <h3>Решето Эратосфена</h3>
-            <p>Введите до какого числа искать простые числа</p>
-            <input type="text" name="operEratosthenes" id="operEratosthenes" value="100">
-            <p>Ответ</p>
-            <p class="eratosthenesAnswer"></p>
-            <button class="eratosthenes">Вывести простые числа</button>
-        </div>
+      <p>
+        <a
+          href="http://chkzagro.ru//images/u_accessories/1_7dcd3.jpg"
+          download="Каток планчатый.jpg"
+          >Скачать изображение катка</a
+        >
+      </p>
 
-        <p><a href="http://chkzagro.ru//images/u_accessories/1_7dcd3.jpg" download="Каток планчатый.jpg">Скачать
-                изображение катка</a></p>
+      <article>
+        <h2>Сельскохозяйственные термины</h2>
+        <dl>
+          <dt>Борона</dt>
+          <dd>
+            Сельскохозяйственное орудие для обработки почвы. Боронование
+            предохраняет почву от высыхания, выравнивает её поверхность,
+            разрушает почвенную корку, уничтожает сорняки. Могут использоваться
+            как отдельно (например, агрегатироваться с тракторами на сцепках),
+            так и совместно с другими сельскохозяйственными орудиями (плугами,
+            сеялками, культиваторами и др.).
+          </dd>
+          <dt>Зубовая борона</dt>
+          <dd>
+            Зубовые бороны имеют рабочие органы в виде зубьев различной формы
+            (квадратные, круглые, ножевые и др.) Зубья могут быть соединены с
+            рамой жёстко, шарнирно или через пружинную стойку. Существуют
+            конструкции зубовых борон с подвижными рамами (колеблющимися или
+            вращающимися).<br />
+            Подразделяются на:<br />
+            <ul>
+              <li>бороны общего назначения;</li>
+              <li>
+                специальные (шлейф-бороны, сетчатые, проволочные, пастбищные и
+                луговые, ножевые вращающиеся, шарнирные).
+              </li>
+            </ul>
+          </dd>
+          <dt>Сетчатая борона</dt>
+          <dd>
+            Секция сетчатой бороны составлена из рамки к которой цепями
+            прикреплено сетчатое полотно. Звенья полотна — это круглые стальные
+            прутки с тупыми концами — зубьями. Сетчатые бороны предназначены для
+            рыхления верхнего слоя почвы и уничтожения сорняков на посевах в
+            период появления всходов, для боронования гребневых посадок
+            картофеля.
+          </dd>
+          <dt>Дисковая борона</dt>
+          <dd>
+            Рабочими органами дисковых борон являются гладкие или с вырезами
+            диски, собранные в батареи[4]. Батареи дисков располагаются под
+            углом к направлению движения агрегата. Во время движения диски
+            вращаются и разрезают пласты почвы, рыхлят её и перемешивают.<br />
+            Дисковые бороны применяются для лущения стерни после уборки
+            сельскохозяйственных культур, ухода за пастбищами и сенокосами,
+            предпосевной обработки зяби.<br />
+            Специальные болотные и садовые бороны применяются для борьбы с
+            сорняками и обработки междурядий. Батареи садовых дисковых борон
+            оснащаются специальными устройствами для их отвода от стволов
+            деревьев.
+          </dd>
+        </dl>
+        <figure>
+          <a
+            href="//commons.wikimedia.org/wiki/File:WW1_-_3_paysannes.jpg?uselang=ru"
+            class="image"
+            ><img
+              alt="Три крестьянки тянут зубовую борону по полю"
+              src="//upload.wikimedia.org/wikipedia/commons/thumb/9/97/WW1_-_3_paysannes.jpg/408px-WW1_-_3_paysannes.jpg"
+              srcset="
+                //upload.wikimedia.org/wikipedia/commons/thumb/9/97/WW1_-_3_paysannes.jpg/612px-WW1_-_3_paysannes.jpg 1.5x,
+                //upload.wikimedia.org/wikipedia/commons/thumb/9/97/WW1_-_3_paysannes.jpg/815px-WW1_-_3_paysannes.jpg 2x
+              "
+              data-file-width="1107"
+              data-file-height="652"
+              width="323"
+              height="190"
+          /></a>
 
+          <figcaption>Три крестьянки тянут зубовую борону по полю</figcaption>
+        </figure>
+      </article>
+
+      <section class="card">
+        <header>
+          <h2>Alex Heal</h2>
+        </header>
         <article>
-            <h2>Сельскохозяйственные термины</h2>
-            <dl>
-                <dt>Борона</dt>
-                <dd>Сельскохозяйственное орудие для обработки почвы. Боронование предохраняет почву от высыхания,
-                    выравнивает её поверхность, разрушает почвенную корку, уничтожает сорняки. Могут использоваться как
-                    отдельно (например, агрегатироваться с тракторами на сцепках), так и совместно с другими
-                    сельскохозяйственными орудиями (плугами, сеялками, культиваторами и др.).</dd>
-                <dt>Зубовая борона</dt>
-                <dd>Зубовые бороны имеют рабочие органы в виде зубьев различной формы (квадратные, круглые, ножевые и
-                    др.) Зубья могут быть соединены с рамой жёстко, шарнирно или через пружинную стойку. Существуют
-                    конструкции зубовых борон с подвижными рамами (колеблющимися или вращающимися).<br>
-                    Подразделяются на:<br>
-                    <ul>
-                        <li>бороны общего назначения;</li>
-                        <li>специальные (шлейф-бороны, сетчатые, проволочные, пастбищные и луговые, ножевые вращающиеся,
-                            шарнирные).</li>
-                    </ul>
-                </dd>
-                <dt>Сетчатая борона</dt>
-                <dd>Секция сетчатой бороны составлена из рамки к которой цепями прикреплено сетчатое полотно. Звенья
-                    полотна — это круглые стальные прутки с тупыми концами — зубьями. Сетчатые бороны предназначены для
-                    рыхления верхнего слоя почвы и уничтожения сорняков на посевах в период появления всходов, для
-                    боронования гребневых посадок картофеля.</dd>
-                <dt>Дисковая борона</dt>
-                <dd>Рабочими органами дисковых борон являются гладкие или с вырезами диски, собранные в батареи[4].
-                    Батареи дисков располагаются под углом к направлению движения агрегата. Во время движения диски
-                    вращаются и разрезают пласты почвы, рыхлят её и перемешивают.<br>
-                    Дисковые бороны применяются для лущения стерни после уборки сельскохозяйственных культур, ухода за
-                    пастбищами и сенокосами, предпосевной обработки зяби.<br>
-                    Специальные болотные и садовые бороны применяются для борьбы с сорняками и обработки междурядий.
-                    Батареи садовых дисковых борон оснащаются специальными устройствами для их отвода от стволов
-                    деревьев.</dd>
-            </dl>
-            <figure>
-                <a href="//commons.wikimedia.org/wiki/File:WW1_-_3_paysannes.jpg?uselang=ru" class="image"><img
-                        alt="Три крестьянки тянут зубовую борону по полю"
-                        src="//upload.wikimedia.org/wikipedia/commons/thumb/9/97/WW1_-_3_paysannes.jpg/408px-WW1_-_3_paysannes.jpg"
-                        srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/97/WW1_-_3_paysannes.jpg/612px-WW1_-_3_paysannes.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/97/WW1_-_3_paysannes.jpg/815px-WW1_-_3_paysannes.jpg 2x"
-                        data-file-width="1107" data-file-height="652" width="323" height="190"></a>
-                <figcaption>Три крестьянки тянут зубовую борону по полю</figcaption>
-            </figure>
-
+          <img
+            src="/images/bodyhealer.jpg"
+            alt="Фотография Алексея на горе Двухглавая"
+          />
+          <p>
+            Россия<br />
+            Челябинск<br />
+            <strong>E-Mail</strong>:
+            <a href="mailto:klodium@gmail.com">klodium@gmail.com</a>
+          </p>
         </article>
+        <footer>
+          <p>Изучение этого интересного мира</p>
+        </footer>
+      </section>
 
-        <section class="card">
-            <header>
-                <h2>Alex Heal</h2>
-            </header>
-            <article>
-                <img src="/images/bodyhealer.jpg" alt="Фотография Алексея на горе Двухглавая">
-                <p>Россия<br>
-                    Челябинск<br>
-                    <strong>E-Mail</strong>: <a href="mailto:klodium@gmail.com">klodium@gmail.com</a></p>
-            </article>
-            <footer>
-                <p>Изучение этого интересного мира</p>
-            </footer>
-        </section>
-
-        <pre><code>var para = document.querySelector('p');
+      <pre><code>var para = document.querySelector('p');
 
 para.onclick = function() {
   alert('Owww, stop poking me!');
 }</code></pre>
 
-        <p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+      <p>
+        You shouldn't use presentational elements like
+        <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.
+      </p>
 
-        <p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+      <p>
+        In the above JavaScript example, <var>para</var> represents a paragraph
+        element.
+      </p>
 
+      <p>
+        Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
+      </p>
 
-        <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
-
-        <pre>$ <kbd>ping mozilla.org</kbd>
+      <pre>$ <kbd>ping mozilla.org</kbd>
 <samp>PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
-        <time datetime="2018-12-26">26 декабря 2018 г.</time>
+      <time datetime="2018-12-26">26 декабря 2018 г.</time>
 
-        <p><a href="index.html#my-id">ссылка внутри документа</a></p>
+      <p><a href="index.html#my-id">ссылка внутри документа</a></p>
 
-        <!-- the aside content can also be nested within the main content -->
+      <!-- the aside content can also be nested within the main content -->
 
-        <aside>
-            <h2>Related</h2>
+      <aside>
+        <h2>Related</h2>
 
-            <ul>
-                <li><a href="#">Oh I do like to be beside the seaside</a></li>
-                <li><a href="#">Oh I do like to be beside the sea</a></li>
-                <li><a href="#">Although in the North of England</a></li>
-                <li><a href="#">It never stops raining</a></li>
-                <li><a href="#">Oh well...</a></li>
-            </ul>
-        </aside>
-
+        <ul>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">Oh I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well...</a></li>
+        </ul>
+      </aside>
     </main>
 
     <!-- And here is our main footer that is used across all the pages of our website -->
     <footer>
-        <address>
-            <p>Page written by <a href="https://github.com/Bodyhealer">Bodyhealer</a>.</p>
-        </address>
+      <address>
+        <p>
+          Page written by
+          <a href="https://github.com/Bodyhealer">Bodyhealer</a>.
+        </p>
+      </address>
     </footer>
 
     <script type="module" src="scripts/main.js"></script>
-</body>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.14/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.5/platform.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/benchmark/2.1.4/benchmark.min.js"></script>
+
+  </body>
 </html>
