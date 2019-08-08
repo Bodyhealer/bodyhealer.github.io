@@ -21,6 +21,12 @@ const factorialWhile = (n) => {
   return result;
 }; */
 
+/**
+ * Calculate factorial with 'for'.
+ *
+ * @param {*} n number.
+ * @returns
+ */
 const factorialFor = (n) => {
   let result = 1;
 

@@ -2,6 +2,12 @@
 
 'use strict';
 
+/**
+ * Prime numbers using Eratosthenes Sieve.
+ *
+ * @param {*} num before that number.
+ * @returns array of prime numbers.
+ */
 const eratosthenesSieve = (num) => {
   let resultString = '';
   let arrNumbers = [];

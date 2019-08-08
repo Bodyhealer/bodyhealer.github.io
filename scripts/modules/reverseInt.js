@@ -2,6 +2,12 @@
 
 'use strict';
 
+/**
+ * Reverse integer number.
+ *
+ * @param {*} num number.
+ * @returns reversed number.
+ */
 const reverseInt = (num) => {
   const sign = Math.sign(num);
   const absNum = Math.abs(num);

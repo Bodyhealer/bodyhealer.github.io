@@ -2,6 +2,13 @@
 
 'use strict';
 
+/**
+ * Fizz Buzz.
+ *
+ * @param {*} begin from that number.
+ * @param {*} end to that number.
+ * @returns string with fizzes and buzzes.
+ */
 const fizzBuzz = (begin, end) => {
   if (begin > end) {
     return '';

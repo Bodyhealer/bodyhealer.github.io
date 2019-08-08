@@ -2,6 +2,12 @@
 
 'use strict';
 
+/**
+ * Fibonacci number.
+ *
+ * @param {*} num order number.
+ * @returns
+ */
 const fib = (num) => {
   if (num === 1) {
     return 1;
