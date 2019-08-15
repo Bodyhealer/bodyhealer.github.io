@@ -2,10 +2,13 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    "jest": true,
+    "mocha": true,
   },
-  plugins: ["jest"],
-  extends: 'airbnb-base',
+  plugins: ["mocha"],
+  extends: [
+    'airbnb-base',
+    "plugin:mocha/recommended",
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -18,10 +21,5 @@ module.exports = {
     radix: ["error", "as-needed"],
     "import/extensions": ["error", "ignorePackages" , { "js": "always"}],
     strict: ["error", "global"],
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
   },
 };

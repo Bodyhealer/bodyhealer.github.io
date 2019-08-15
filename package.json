@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "mocha --require @babel/register"
   },
   "repository": {
     "type": "git",
@@ -21,13 +21,17 @@
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.5.5",
     "@types/jest": "^24.0.15",
+    "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jest": "^22.7.2",
-    "jest": "^24.8.0",
+    "eslint-plugin-mocha": "^6.0.0",
     "jshint": "^2.10.2",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
     "puppeteer": "^1.18.1",
     "sloc": "^0.2.1"
   },
